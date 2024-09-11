@@ -38,8 +38,10 @@ const Login = ({ onLogin }) => {
       const response = await login(userEmail, userPassword);
   
       if (response.data) {
-        const userId = response.data.userId;  
+        const userId = response.data.id;  
         localStorage.setItem('userId', userId);  // Store userId in localStorage
+        const userName = response.data.userName;
+        localStorage.setItem('userName', userName);
         toast.success('Login successful');
         onLogin(userEmail);
         

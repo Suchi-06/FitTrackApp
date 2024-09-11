@@ -15,14 +15,14 @@ const AddActivityType = () => {
     }
 
     const newActivity = {
-      name: activityName,
+      description: activityName,
     };
 
     // Submit form data to the API
     addActivityType(newActivity)
       .then((response) => {
         console.log("Activity added successfully", response.data);
-        setMessage(`${response.data.name} Activity Type added with activity type id ${response.data.activityTypeId}`);
+        setMessage(`${response.data.description} Activity Type added with activity type id ${response.data.activityTypeId}`);
         setActivityName(""); // Reset form
         setError(""); // Clear any errors
       })

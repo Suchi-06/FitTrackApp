@@ -10,11 +10,14 @@ import home6 from '../assets/images/home6.PNG';
 
 const Home = () => {
   const [userId, setUserId] = useState(null);
+  const [userName, setUserName] = useState(null);
 
   // Retrieve userId from localStorage when the component mounts
   useEffect(() => {
     const storedUserId = localStorage.getItem('userId');
     setUserId(storedUserId);
+    const storedUserName = localStorage.getItem('userName');
+    setUserName(storedUserName);
   }, []);
 
   const gridItems = [
@@ -60,7 +63,7 @@ const Home = () => {
     <div className="container mt-5">
       {userId && (
         <div className="alert alert-info" role="alert">
-          Welcome back! User ID: <strong>{userId}</strong>
+          Welcome Back! User ID: <strong>{userId}</strong> All the Best <strong>{userName}</strong>
         </div>
       )}
 

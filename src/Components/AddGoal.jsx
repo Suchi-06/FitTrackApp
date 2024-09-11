@@ -96,7 +96,7 @@ const AddGoal = () => {
             <option value="">Select Activity</option>
             {activityTypes.map((activity) => (
               <option key={activity.activityTypeId} value={activity.activityTypeId}>
-                {activity.name}
+                {activity.description}
               </option>
             ))}
           </select>

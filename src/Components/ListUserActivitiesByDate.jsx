@@ -54,7 +54,7 @@ const ListUserActivitiesByDate = () => {
             <tr>
               <th>User Name</th>
               <th>Activity Name</th>
-              <th>Duration (minutes)</th>
+              <th>Duration (Minutes)</th>
               <th>Calories Burned</th>
             </tr>
           </thead>
@@ -62,8 +62,8 @@ const ListUserActivitiesByDate = () => {
             {activities.map((activity) => (
               <tr key={activity.activityDate}>
                 <td>{activity.userName}</td>
-                <td>{activity.description}</td>
-                <td>{activity.durationInMinutes}</td> 
+                <td>{activity.activityName}</td>
+                <td>{activity.durationMinutes}</td> 
                 <td>{activity.caloriesBurned}</td>
               </tr>
             ))}

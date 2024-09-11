@@ -92,7 +92,7 @@ const AddUserActivity = () => {
             <option value="">Select an Activity</option>
             {activityTypes.map((type) => (
               <option key={type.activityTypeId} value={type.activityTypeId}>
-                {type.name}
+                {type.description}
               </option>
             ))}
           </select>
